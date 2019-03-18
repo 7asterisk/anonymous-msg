@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let user of users ">
+    {{ user.uid }}
+  </li>
+</ul>
+
+<div>
+  {{ (item | async)?.msg }}
+</div>

@@ -1,0 +1,51 @@
+<div *ngIf="afAuth.user | async as user; else showLogin">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <span>Hexadigi</span>
+      <span class="example-spacer"></span>
+      <button mat-raised-button (click)="logout()">Logout</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <h3>Hi {{ user.displayName }}!</h3>
+  <p>Your message box has been created.
+    <br>
+    Now share this link with your loved ones to get their secret messages.
+    <br>
+    For share click the share option below. </p>
+  <button (click)='shareme(user.displayName,user.uid)' mat-raised-button color='primary'>
+    <mat-icon>share</mat-icon>share
+  </button>
+  <!-- <button mat-raised-button routerLink='write-msg/{{user.uid}}' color='primary'>
+    <mat-icon>share</mat-icon> whatsapp
+  </button> -->
+  <br><br>
+  <h5>Your messages</h5>
+<div *ngFor="let msg of msgs | async" class="msg-box">
+  <mat-card >
+    <mat-icon mat-list-icon>insert_comment</mat-icon>
+    <mat-divider></mat-divider>
+    <p mat-line> {{ msg.msg }} </p>
+  </mat-card>
+  <br>
+</div>
+  
+</div>
+
+
+<ng-template #showLogin>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <span>Hexadigi</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <br><br>
+  <mat-card>
+    <p>Create your message box, through login by Google
+      and a shareable link will be created that can be used to receive secret message from your loved ones.</p>
+  </mat-card>
+  <br><br>
+  <button mat-raised-button (click)="login()" color='primary'>Login with Google</button>
+
+</ng-template>
