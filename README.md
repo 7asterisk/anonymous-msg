@@ -26,3 +26,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 # anonymous-msg
+In this angular project you can create a profile using google auth,
+and it will give you a shearable line,
+you can send to all yours loves one,
+and youll receve a msg without any name so you have to guess who send you the msg from whome you send the link.
+The one who is writing a msg dont need any auth.
+# demo
+https://secret-msg-e9a47.firebaseapp.com/
