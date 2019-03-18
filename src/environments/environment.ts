@@ -5,12 +5,7 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyB8yfMoxpJ6JKkmqW0oNcRLo1_vdVeasbs',
-    authDomain: 'secret-msg-e9a47.firebaseapp.com',
-    databaseURL: 'https://secret-msg-e9a47.firebaseio.com',
-    projectId: 'secret-msg-e9a47',
-    storageBucket: '',
-    messagingSenderId: '133386236107'
+    
   }
 };
 
